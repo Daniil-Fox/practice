@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# Система тестирования и обучения
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Проект представляет собой веб-приложение для проведения тестирования и обучения сотрудников. Разработан с использованием React и современных веб-технологий.
 
-## Available Scripts
+## 🚀 Основные возможности
 
-In the project directory, you can run:
+- Система управления пользователями (сотрудниками)
+- Создание и проведение тестов
+- Управление курсами обучения
+- Отслеживание прогресса обучения
+- Аналитика результатов тестирования
 
-### `npm start`
+## 📑 Модули и страницы
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Административная панель
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **AdminDashboard** - Главная панель администратора
+  - Управление сотрудниками
+  - Просмотр статистики
+  - Управление ролями и правами
 
-### `npm test`
+### Управление тестами
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **TestManagement** - Создание и редактирование тестов
+  - Добавление вопросов
+  - Настройка параметров теста
+  - Управление результатами
+- **TestSelection** - Выбор доступных тестов
+- **TestPage** - Страница прохождения теста
+- **TestResult** - Просмотр результатов тестирования
 
-### `npm run build`
+### Управление курсами
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **CourseManagement** - Создание и редактирование курсов
+  - Добавление уроков
+  - Настройка структуры курса
+  - Управление материалами
+- **CourseSelection** - Выбор доступных курсов
+- **CourseView** - Просмотр и прохождение курса
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Панель сотрудника
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **EmployeeDashboard** - Личный кабинет сотрудника
+  - Доступные тесты и курсы
+  - Прогресс обучения
+  - История прохождения
 
-### `npm run eject`
+### Общие компоненты
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **AuthModal** - Модальное окно авторизации
+- **AddEmployeeModal** - Добавление нового сотрудника
+- **EmployeeDetailsModal** - Просмотр деталей сотрудника
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 Технологический стек
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Frontend:**
+  - React 18
+  - React Router v6
+  - Tailwind CSS
+  - Jest + React Testing Library
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📦 Установка и запуск
 
-## Learn More
+1. Клонируйте репозиторий:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone <URL репозитория>
+cd testing-site
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Установите зависимости:
 
-### Code Splitting
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Запустите проект в режиме разработки:
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Приложение будет доступно по адресу [http://localhost:3000](http://localhost:3000)
 
-### Making a Progressive Web App
+## 🏗 Структура проекта
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+src/
+├── components/     # Переиспользуемые компоненты
+│   ├── AuthModal.js
+│   ├── AddEmployeeModal.js
+│   └── EmployeeDetailsModal.js
+├── pages/         # Страницы приложения
+│   ├── AdminDashboard.js
+│   ├── TestManagement.js
+│   ├── CourseManagement.js
+│   ├── EmployeeDashboard.js
+│   └── ...
+├── services/      # Сервисы для работы с API
+├── data/          # Моковые данные
+├── App.js         # Корневой компонент
+└── index.js       # Точка входа
+```
 
-### Advanced Configuration
+## 🧪 Тестирование
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Для запуска тестов используйте:
 
-### Deployment
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📦 Сборка для продакшена
 
-### `npm run build` fails to minify
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Собранные файлы будут находиться в директории `build/`
+
+## 🔧 Конфигурация
+
+- `package.json` - настройки проекта и зависимости
+- `tailwind.config.js` - конфигурация Tailwind CSS
+- `postcss.config.js` - настройки PostCSS
+
+## 🤝 Вклад в проект
+
+1. Форкните репозиторий
+2. Создайте ветку для ваших изменений (`git checkout -b feature/amazing-feature`)
+3. Сделайте коммит ваших изменений (`git commit -m 'Add some amazing feature'`)
+4. Отправьте изменения в ваш форк (`git push origin feature/amazing-feature`)
+5. Создайте Pull Request
+
+## 📝 Лицензия
+
+Этот проект распространяется под лицензией MIT. Подробности смотрите в файле [LICENSE](LICENSE).
+
+## 📞 Контакты
+
+Если у вас есть вопросы или предложения, пожалуйста, создайте issue в репозитории проекта.
